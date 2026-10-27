@@ -1,0 +1,458 @@
+/* --- Contenedor general del Catálogo --- */
+.catalogo-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header del Catálogo con estilo editorial */
+.catalogo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 3.5rem;
+  background: transparent;
+}
+
+.catalogo-header-info {
+  max-width: 650px;
+}
+
+.badge-subtitulo {
+  display: inline-block;
+  background-color: #ecfdf5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 30px;
+  margin-bottom: 0.85rem;
+  border: 1px solid #a7f3d0;
+}
+
+.catalogo-header-info h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.8px;
+}
+
+.catalogo-header-info p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Selector de Categorías Estilizado */
+.filtro-categoria-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtro-categoria-box label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.3px;
+}
+
+.select-custom {
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  padding: 0.8rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.select-custom:focus, .select-custom:hover {
+  border-color: #047857;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.1);
+}
+
+/* --- Sección de Ofertas Especiales --- */
+.seccion-ofertas {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  border: 1px solid #a7f3d0;
+  box-shadow: 0 10px 30px -10px rgba(4, 120, 87, 0.08);
+}
+
+.ofertas-header h2 {
+  font-size: 1.85rem;
+  color: #065f46;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.5px;
+}
+
+.ofertas-header p {
+  color: #047857;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* --- Badge Rojo de Oferta --- */
+.badge-oferta {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.4rem 0.85rem;
+  border-radius: 30px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+  letter-spacing: 0.5px;
+}
+
+/* --- Grilla de Productos --- */
+.catalogo-titulo-seccion {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.catalogo-titulo-seccion h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.contador-productos {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.grid-productos-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.25rem;
+  margin-bottom: 4rem;
+}
+
+/* Tarjetas de Producto Modernas */
+.tarjeta-generica.tarjeta-lente-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-lente-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.tarjeta-img-link {
+  display: block;
+  text-decoration: none;
+}
+
+.img-frame {
+  width: 100%;
+  height: 210px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+.img-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta-lente-card:hover .img-frame img {
+  transform: scale(1.1);
+}
+
+.tarjeta-body-bloque {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-titulo-link {
+  text-decoration: none;
+}
+
+.tarjeta-body-bloque h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a !important;
+  margin: 0 0 0.75rem 0;
+  min-height: 48px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.tarjeta-titulo-link:hover h4 {
+  color: #047857 !important;
+}
+
+/* Precios */
+.precio-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.precio-normal {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.precio-oferta {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #065f46;
+}
+
+.precio-tachado {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Botones de Acción */
+.acciones-tarjeta-compacta {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-ver-mas-compacto {
+  flex: 1;
+  background-color: #f1f5f9;
+  color: #475569;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-ver-mas-compacto:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.btn-carrito-principal {
+  flex: 1;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.btn-carrito-principal:hover {
+  background-color: #047857;
+  box-shadow: 0 6px 16px rgba(4, 120, 87, 0.3);
+}
+
+.btn-carrito-principal:active {
+  transform: scale(0.97);
+}
+
+/* --- Modal Flotante --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: #ffffff;
+  padding: 2.75rem;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 440px;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-titulo-exito {
+  color: #065f46;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.modal-img-prod {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 16px;
+  background-color: #f8fafc;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.modal-prod-nombre {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.modal-prod-precio {
+  font-weight: 800;
+  color: #065f46;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.modal-botones-flex {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-modal-secundario {
+  flex: 1;
+  padding: 0.85rem;
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.btn-modal-secundario:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.btn-modal-principal {
+  flex: 1;
+  padding: 0.85rem;
+  background: #0f172a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.btn-modal-principal:hover {
+  background: #047857;
+}
+
+/* --- Badge Rojo de Oferta Súper Llamativo --- */
+.badge-oferta {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, #ff2d55 0%, #e11d48 50%, #be123c 100%);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 0.45rem 0.95rem;
+  border-radius: 30px;
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  animation: pulsoOferta 2s infinite ease-in-out;
+}
+
+/* Animación sutil de pulso para llamar la atención */
+@keyframes pulsoOferta {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 8px 25px rgba(225, 29, 72, 0.65);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogo-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .select-custom {
+    width: 100%;
+  }
+}
+
