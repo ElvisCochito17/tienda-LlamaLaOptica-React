@@ -1,0 +1,297 @@
+/* --- Estilos Generales Home --- */
+.home-container {
+  width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(135deg, rgba(6, 6, 6, 0.88) 0%, rgba(31, 41, 55, 0.82) 100%), url('../img/Fondo3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  background-color: #2e5a44;
+  color: #ffffff;
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-catalogo {
+  background-color: #2e5a44;
+  color: #ffffff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-catalogo:hover {
+  background-color: #234534;
+  transform: translateY(-2px);
+}
+
+.btn-nosotros {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-nosotros:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* --- Features Grid --- */
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #2e5a44;
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- Destacados Section --- */
+.destacados-section {
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: black;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: #6b7280;
+  font-size: 1.05rem;
+}
+
+/* Contenedor de tarjetas (Grid) */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Estilos para tu componente Tarjeta */
+.tarjeta-lentes-home {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+}
+
+.tarjeta-lentes-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-img-wrapper {
+  width: 100%;
+  height: 240px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+
+.tarjeta-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-lentes-home:hover .tarjeta-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+.tarjeta-body-bloque {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-body-bloque h3,
+.tarjeta-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000 !important;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-precio {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2e5a44;
+  margin-bottom: 0.75rem;
+}
+
+.tarjeta-descripcion {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.tarjeta-detalles-box {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.tarjeta-texto-linea {
+  font-size: 0.88rem;
+  margin: 0.35rem 0;
+  color: #374151;
+}
+
+.btn-ver-mas {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #2e5a44;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3.5rem 1.25rem;
+    margin: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forzar que el badge de oferta esté siempre visible y fijo */
+.tarjeta-lentes-home .badge-oferta {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  z-index: 10 !important;
+} 
