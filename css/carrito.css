@@ -1,0 +1,70 @@
+/* Botón cápsula del Carrito en la barra de navegación */
+nav ul li a.btn-carrito-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-style: normal;
+  font-size: 16px;
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+nav ul li a.btn-carrito-nav:hover {
+  background-color: dimgray;
+  border-color: lightgray;
+}
+
+/* Placa con el contador de productos */
+.badge {
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+/* Contenedor de los dos botones dentro de la tarjeta */
+.acciones-producto {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* El botón de cotizar original */
+.btn-ver {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: auto;
+}
+
+/* El nuevo botón de añadir al carrito */
+.btn-agregar {
+  flex: 1;
+  background-color: darkslategray;
+  color: white;
+  border: 1px solid gray;
+  padding: 10px 5px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background-color: gray;
+}

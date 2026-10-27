@@ -1,0 +1,101 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Courier New', Courier, monospace; /* Fuente clásica de boleta */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.boleta-contenedor {
+    background-color: #fff;
+    max-width: 400px; /* Las boletas suelen ser angostas */
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boleta-cabecera {
+    text-align: center;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.boleta-cabecera h1 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+}
+
+.boleta-numero {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.boleta-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.boleta-tabla th, .boleta-tabla td {
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.boleta-tabla th {
+    border-bottom: 1px solid #333;
+}
+
+.boleta-tabla td:last-child, .boleta-tabla th:last-child {
+    text-align: right;
+}
+
+.boleta-totales {
+    text-align: right;
+    border-top: 2px dashed #ccc;
+    padding-top: 15px;
+    font-size: 18px;
+}
+
+.boleta-pie {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+}
+
+.btn-imprimir {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-imprimir:hover {
+    background-color: #0056b3;
+}
+
+/* Magia de CSS: Oculta el botón cuando se genera el PDF o se imprime */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    .boleta-contenedor {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    .btn-imprimir {
+        display: none; 
+    }
+}

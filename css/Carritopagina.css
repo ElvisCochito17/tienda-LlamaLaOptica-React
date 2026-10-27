@@ -1,0 +1,304 @@
+/* --- Contenedor Principal de Pedido --- */
+.pedido-main-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.titulo-seccion {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.pedido-grid-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .pedido-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.items-carrito-seccion h3,
+.formulario-pago-seccion h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* --- CAJAS DE PRODUCTOS PREMIUM --- */
+.card-item-carrito {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-item-carrito:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.08);
+}
+
+.item-img-contenedor {
+  width: 95px;
+  height: 95px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 14px;
+  padding: 0.6rem;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-img-contenedor img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.item-detalles-info {
+  flex-grow: 1;
+}
+
+.item-detalles-info h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+}
+
+.item-precio-unitario {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0 0 1rem 0;
+}
+
+.item-precio-unitario span {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Botones de cantidad pill */
+.item-acciones-fila {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.control-cantidad-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.control-cantidad-badge button {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.control-cantidad-badge button:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.control-cantidad-badge span {
+  padding: 0 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+/* Botón eliminar rojo */
+.btn-eliminar-rojo {
+  background-color: #fef2f2 !important;
+  color: #dc2626 !important;
+  border: 1px solid #fca5a5 !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none !important;
+}
+
+.btn-eliminar-rojo:hover {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+}
+
+/* Bloque subtotal del producto */
+.item-subtotal-bloque {
+  text-align: right;
+  padding-left: 1.25rem;
+  border-left: 1px solid #f1f5f9;
+  min-width: 120px;
+}
+
+.label-subtotal {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #64748b;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.monto-subtotal {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* --- CUADRO DE RESUMEN Y FORMULARIO --- */
+.resumen-total-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+}
+
+.resumen-total-box h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.fila-pago {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.fila-pago.total {
+  border-top: 2px solid #e2e8f0;
+  margin-top: 10px;
+  padding-top: 15px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.formulario-pago-seccion {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 20px !important;
+  padding: 2rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+}
+
+.formulario-pago-seccion input,
+.formulario-pago-seccion select {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.formulario-pago-seccion input:focus,
+.formulario-pago-seccion select:focus {
+  border-color: #047857;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.1);
+}
+
+.formulario-pago-seccion label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.btn-simular-pago {
+  width: 100%;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  margin-top: 10px;
+}
+
+.btn-simular-pago:hover {
+  background-color: #047857;
+}
+
+@media (max-width: 640px) {
+  .card-item-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-subtotal-bloque {
+    border-left: none;
+    border-top: 1px solid #f1f5f9;
+    padding-left: 0;
+    padding-top: 0.75rem;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,102 @@
+/* Tarjeta blanca centrada */
+.Formulario-contenedor {
+    background-color: rgba(226, 225, 225, 0.718)  ;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 7px;
+    margin-top: 5px;
+    border-radius: 16px;
+}
+
+.fila-botones {
+    display: flex;
+    gap: 10px;               /* Separa los botones parejo */
+    justify-content: center; /* Prueba con: flex-end (derecha), flex-start (izquierda) o center */
+    padding-top: 15px;
+}   
+
+.Formulario-contenedor table {
+    width: 100%;
+}
+
+.Formulario-contenedor td {
+    padding: 5px 3px;
+    font-size: 17px;
+}
+
+/* Hace que las cajas de texto sean más anchas y cómodas */
+.Formulario-contenedor input[type="email"],
+.Formulario-contenedor input[type="text"],
+.Formulario-contenedor input[type="number"],
+.Formulario-contenedor input[type="password"],
+.Formulario-contenedor textarea,
+.Formulario-contenedor select {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none; /* Permite cambiar el tamaño verticalmente / / Altura mínima */
+}
+.btn-enviar,
+.btn-limpiar,
+.btn-secundario {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;            /* Quita el borde gris por defecto de los inputs */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;         /* Hace que aparezca la manito al pasar el mouse */
+    transition: background-color 0.2s ease;
+}
+
+.btn-enviar:hover,
+.btn-limpiar:hover,
+.btn-secundario:hover {
+    background-color: dimgray;
+}
+
+#btnRestar {
+    background-color: #8b0000; /* Rojo oscuro para indicar acción de borrar */
+}
+
+#btnRestar:hover {
+    background-color: #b22222;
+}
+
+/* Adaptación para pantallas de celular o ventanas reducidas */
+@media (max-width: 600px) {
+  .Formulario-contenedor {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* Hace que las etiquetas y campos queden en una sola columna */
+  .Formulario-contenedor tr,
+  .Formulario-contenedor td {
+    display: block;
+    width: 100%;
+  }
+
+  .Formulario-contenedor td:first-child {
+    padding-bottom: 2px;
+    font-weight: bold;
+  }
+
+  /* Permite que los botones bajen a una segunda fila si no caben */
+  .fila-botones {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fila-botones input,
+  .fila-botones button {
+    flex: 1 1 45%; /* Los botones se acomodan en bloques de 2x2 */
+  }
+}
