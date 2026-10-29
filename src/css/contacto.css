@@ -1,0 +1,263 @@
+/* Contenedor General */
+.contacto-pagina {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem 1rem;
+  font-family: inherit;
+}
+
+/* Hero Section */
+.contacto-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contacto-hero h1 {
+  font-size: 2.2rem;
+  color: #2e5a44;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-hero p {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Contenedor Grid de 2 Columnas */
+.contacto-grid-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Card Izquierda: Información de la Óptica */
+.contacto-info-card {
+  background-color: #2e5a44;
+  color: #ffffff;
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-info-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.info-subtext {
+  font-size: 0.95rem;
+  color: #d1e3d7;
+  margin-bottom: 2rem;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e2f0e7;
+}
+
+/* Formulario Derecha */
+.Formulario-contenedor {
+  background-color: #ffffff;
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+}
+
+.contacto-form h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.campo-grupo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.Formulario-contenedor input[type="email"],
+.Formulario-contenedor input[type="text"],
+.Formulario-contenedor input[type="number"],
+.Formulario-contenedor textarea,
+.Formulario-contenedor select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.Formulario-contenedor input:focus,
+.Formulario-contenedor textarea:focus,
+.Formulario-contenedor select:focus {
+  outline: none;
+  border-color: #2e5a44;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(46, 90, 68, 0.15);
+}
+
+.fila-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botones */
+.fila-botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-enviar {
+  background-color: #2e5a44;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #234534;
+}
+
+.btn-limpiar {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-limpiar:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Adaptación Mobile */
+@media (max-width: 850px) {
+  .contacto-grid-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .fila-doble {
+    grid-template-columns: 1fr;
+  }
+
+  .fila-botones {
+    flex-direction: column-reverse;
+  }
+
+  .btn-enviar,
+  .btn-limpiar {
+    width: 100%;
+  }
+}
+
+/* Estilo para el input de tipo archivo */
+.input-archivo {
+  padding: 8px !important;
+  background-color: #fafafa;
+  border: 1px dashed #ccc !important;
+  cursor: pointer;
+}
+
+.input-archivo:hover {
+  border-color: #2e5a44 !important;
+}
+
+/* Contenedor del input de archivo personalizado */
+.custom-file-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Ocultamos el input feo del navegador pero lo dejamos funcional */
+.input-archivo-oculto {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Creamos un botón estético que actúa como selector y zona de soltado */
+.btn-custom-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #f4f8f5;
+  border: 2px dashed #2e5a44;
+  border-radius: 8px;
+  color: #2e5a44;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-custom-file:hover {
+  background-color: #e2ede6;
+  border-color: #234534;
+}

@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+.admin-contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+.admin-sidebar {
+    width: 250px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-logo {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.admin-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #222;
+    transition: background-color 0.2s;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.admin-nav li a:hover, .admin-nav li a.activo {
+    background-color: #333;
+}
+
+/* CONTENIDO PRINCIPAL */
+.admin-main {
+    flex: 1;
+    min-width: 0; /* permite que el contenido se encoja y las tablas hagan scroll dentro de su caja */
+    padding: 30px;
+    background-color: #fff;
+}
+
+.admin-header h1 {
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* TABLAS */
+
+.admin-header {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    border-bottom: 5px solid #eee; 
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.logo-titulo {
+    height: 35px; 
+    width: auto;
+}
+
+/* RESPONSIVO: en pantallas chicas el menú pasa arriba y el contenido ocupa todo el ancho */
+@media (max-width: 768px) {
+    .admin-contenedor {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        height: auto !important;      /* anula el height:100vh en línea del componente */
+        position: static !important;  /* anula el sticky en línea del componente */
+    }
+
+    .admin-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .admin-nav li a {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .admin-main {
+        padding: 16px;
+    }
+
+    .admin-header h1 {
+        font-size: 1.4rem;
+    }
+}

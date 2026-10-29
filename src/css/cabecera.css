@@ -1,0 +1,79 @@
+/* Barra completa con flexbox */
+
+.marca span {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #090909;
+  padding: 5px 20px;
+}
+
+/* Grupo: Logo + Nombre */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+/* Control del tamaño de la llama */
+.logo {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+/* Estilo limpio y en línea para el botón del carrito en el nav /
+.btn-carrito-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-carrito-nav:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/ Estilo para el contador (badge rojo circular) */
+.btn-carrito-nav .badge {
+  background-color: #ff2d55 !important;
+  color: #ffffff !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 2px 6px !important;
+  border-radius: 50px !important;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Botón "Panel Admin" (solo visible para el administrador) */
+.btn-admin-nav {
+  background-color: #f5b301 !important;
+  color: #1f2937 !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-admin-nav:hover {
+  background-color: #ffc933 !important;
+}

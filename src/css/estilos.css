@@ -1,0 +1,78 @@
+@import url(cabecera.css);
+@import url(menu.css);
+@import url(pie.css     );
+@import url(contacto.css);
+@import url(blog.css);
+@import url(carrito.css);
+@import url(catalogo.css);
+
+
+@media (max-width: 768px) {
+  /* 1. Menú de navegación: pasa de horizontal a lista vertical centrada */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  /* 2. Catálogo: si tienes tarjetas de productos, se acomodan solas */
+  .contenedor-tarjetas,
+  .catalogo-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en celular en vez de 3 o 4 */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* 3. Evita desbordes horizontales de imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+body {
+    background-color: lightgray;
+
+}
+
+body {
+  min-height: 100vh;           /* Obliga a la página a medir el 100% del alto de la pantalla */
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;                     /* Hace que el contenido del medio crezca y empuje el footer al fondo */
+}
+.Bienvenida{
+    padding: 0 40px;
+    margin: 20px;
+}
+
+/* Si es pantalla de PC (grande) */
+@media (min-width: 769px) {
+  body {
+    background-image: url('../img/Fondo3.jpg');
+    background-size: cover;
+  }
+}
+
+/* Si es pantalla de celular (chica) */
+@media (max-width: 480px) {
+  body {
+    background-image: none;      /* Quita la foto pesada */
+    background-color: lightgray; /* Deja un fondo gris simple */
+  }
+}

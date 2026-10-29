@@ -1,0 +1,41 @@
+/* Hoja de Estilo para Quienes Somos */
+.info-empresa, .info-desarrolladores {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.info-empresa p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.contenedor-perfiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
+}
+
+.perfil {
+    background-color: #f4f4f4; /* Gris claro de la paleta del equipo */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: translateY(-5px); /* Efecto de elevacion al pasar el mouse */
+}
+
+.perfil h3 {
+    color: #000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}

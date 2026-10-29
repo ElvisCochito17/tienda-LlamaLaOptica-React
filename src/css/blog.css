@@ -1,0 +1,167 @@
+/* --- Estilos base del Blog --- */
+.blog-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 2rem 1.5rem;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+ color: #2c3e50;
+}
+
+/* Hero Section */
+.blog-hero {
+ text-align: center;
+ padding: 3rem 1rem;
+ background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+ border-radius: 16px;
+ margin-bottom: 3rem;
+}
+
+.blog-hero h1 {
+ font-size: 2.5rem;
+ font-weight: 700;
+ color: #1a252f;
+ margin-bottom: 0.75rem;
+}
+
+.blog-hero p {
+ font-size: 1.15rem;
+ max-width: 650px;
+ margin: 0 auto;
+ color: #6c757d;
+ line-height: 1.6;
+}
+
+/* Grid de Tarjetas */
+.contenedor-tarjetas {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ margin-bottom: 4rem;
+}
+
+/* Estilos adaptados a tu componente Tarjeta */
+.tarjeta-generica {
+ background: #ffffff;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+ transition: transform 0.25s ease, box-shadow 0.25s ease;
+ display: flex;
+ flex-direction: column;
+}
+
+.tarjeta-generica:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper {
+ width: 100%;
+ height: 220px;
+ overflow: hidden;
+ background-color: #f1f3f5;
+}
+
+.img-wrapper img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.3s ease;
+}
+
+.tarjeta-generica:hover .img-wrapper img {
+ transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+.tarjeta-body-bloque {
+ padding: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+}
+
+.categoria-badge {
+ display: inline-block;
+ align-self: flex-start;
+ background-color: #e7f5ff;
+ color: #1971c2;
+ font-size: 0.75rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ padding: 0.25rem 0.6rem;
+ border-radius: 20px;
+ margin-bottom: 0.75rem;
+}
+
+.tarjeta-body-bloque h4 {
+ font-size: 1.25rem;
+ font-weight: 600;
+ color: #212529;
+ margin-bottom: 0.5rem;
+ line-height: 1.4;
+}
+
+.meta {
+ font-size: 0.85rem;
+ color: #adb5bd;
+ margin-bottom: 1rem;
+}
+
+.descripcion {
+ font-size: 0.95rem;
+ color: #495057;
+ line-height: 1.5;
+ margin: 0;
+}
+
+/* Bloque de Impacto Ambiental */
+.impacto-ambiental {
+ margin-top: 2rem;
+}
+
+.impacto-box {
+ background-color: #ebfbee;
+ border: 1px solid #d3f9d8;
+ border-radius: 12px;
+ padding: 2.5rem 2rem;
+ text-align: center;
+ max-width: 550px;
+ margin: 0 auto;
+}
+
+.impacto-box p {
+ color: #2b8a3e;
+ font-size: 1.05rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ font-weight: 500;
+}
+
+.btn-impacto {
+ display: inline-block;
+ background-color: #2b8a3e;
+ color: #ffffff;
+ padding: 0.75rem 1.75rem;
+ border-radius: 8px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-impacto:hover {
+ background-color: #237032;
+ transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ .blog-hero h1 {
+  font-size: 2rem;
+ }
+
+ .contenedor-tarjetas {
+  grid-template-columns: 1fr;
+ }
+}
